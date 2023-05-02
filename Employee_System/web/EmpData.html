@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script>
+            function Validate()
+            {
+                var n1 = document.myform.nm1.value;
+                var n2 = document.myform.nm2.value;
+                var n3 = document.myform.nm3.value;
+                var i = document.myform.id.value;
+                var d =document.getElementById("dept").value;
+                var p =document.getElementById("pos").value;
+                var m = document.myform.sal.value;
+                
+                
+                
+                if(n1===null || n1==="")
+                {
+                    alert("Please enter your Firstname...");
+                    return false;
+                }
+                if(n2===null || n2==="")
+                {
+                    alert("Please enter your Middlename...");
+                    return false;
+                }
+                if(n3===null || n3==="")
+                {
+                    alert("Please enter your Lastname...");
+                    return false;
+                }
+                if(i===null || i==="")
+                {
+                    alert("Please enter your Id...");
+                    return false;
+                }
+                if(isNaN(i))
+                {
+                    alert("plz enter your Id in numeric...");
+                    return false;
+                }
+                if(d==="0")
+                {
+                    alert("Please select department...");
+                    return false;
+                }
+                if(p==="0")
+                {
+                    alert("Please select position...");
+                    return false;
+                }
+                if(m===null || m==="")
+                {
+                    alert("Please enter Salary...");
+                    return false;
+                }
+                if(isNaN(m))
+                {
+                    alert("Salary Should be in Numeric..");
+                    return false;
+                }
+                
+                
+                
+            }
+        </script>
+        <style>
+            .btn{
+    
+    font-size: 15px;
+    padding: 4px 4px;
+    border-radius: 12px;
+    font-weight: 500;
+    min-height:30px; 
+    min-width: 160px;
+    color:#2B3467;
+    background-color: white;
+    border: 2px solid #2B3467;
+    
+    
+}
+            body{
+                background-image: url(addallow2.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            span{
+                background-color: aliceblue;
+                color: gray;
+            }
+            .heading{
+                margin-top: 50px;
+            }
+            
+            .sheading{
+                margin-top: 60px;
+            }
+        </style>
+    </head>
+    <body bgcolor="thistle">
+        
+         <center>
+             <div class="heading"><h1><i><span>EMPLOYEE MANAGEMENT SYSTEM</span></i></h1></div>
+        <div class="sheading"><h1><u>Employee Info</u></h1></div>
+        <form name="myform" action="EmployeeRegister.jsp" onsubmit="return Validate()">
+        
+            <div class="tb">
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input type="text" name="nm1" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Middle Name:</td>
+                        <td><input type="text" name="nm2" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" name="nm3" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Employee ID:</td>
+                        <td><input type="text" name="id" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Department:</td>
+                        <td><select name="dept" id="dept">
+                                <option value="0">Select</option>
+                                <option value="CSE">CSE</option>
+                                <option value="IT">IT</option>
+                                <option value="MECHANICAL">MECHANICAL</option>
+                                <option value="CIVIL">CIVIL</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Position:</td>
+                        <td><select name="pos" id="pos">
+                                <option value="0">Select</option>
+                                <option value="Programmer">Programmer</option>
+                                <option value="Analyst">Analyst</option>
+                                <option value="Developer">Developer</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Monthly Salary:</td>
+                        <td><input type="text" name="sal" value="" /></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <br><br><input class="btn" type="submit" value="SUBMIT" /> <input class="btn" type="reset" value="CANCEL" />
+            </div>
+        </form>
+        
+
+        
+    </center>
+    </body>
+</html>

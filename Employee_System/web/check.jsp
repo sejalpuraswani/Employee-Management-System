@@ -21,7 +21,7 @@
         <%
             String u=request.getParameter("username");
             String p=request.getParameter("password");
-            if(u.equalsIgnoreCase("Sejal")&& p.equals("1234"))
+            if(u.equalsIgnoreCase("Sejal")&& p.equals("hello@234"))
             {
                 response.sendRedirect("Suggest.jsp");
             }

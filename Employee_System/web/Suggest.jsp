@@ -13,7 +13,7 @@
         
          <style>
              body{
-                background-image: url(homepage2.jpg);
+                background-image: url(viewemployee1.jpg);
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
